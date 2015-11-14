@@ -392,7 +392,7 @@ exitapp
 ; ######################################################################################################
 
 Requirements:
-Name = Points
+Name = Total Points
 IconName = Points
 gosub %CurrentLoopCode%
 Name = Hidden Packages
