@@ -231,7 +231,7 @@ Gui, 1:Add, ListView, c%TextColour% vRequirementsListView Background%BackColour%
 For Index, IconName in RequirementsArray
 {
 	; Create the entry in the listview. Check if PointsPer is defined, if not leave it out.
-	LV_Add("", %IconName%.Name, 0, (%IconName%.PointsPer != "" ? " * "%IconName%.PointsPer : ""))
+	LV_Add("", %IconName%.Name, 0, (%IconName%.PointsPerText ? " * "%IconName%.PointsPerText : ""))
 }
 TotalRows := LV_GetCount()
 gui, 1:Color, %BackColour%, %BackColour%
@@ -439,7 +439,7 @@ gosub %CurrentLoopCode%
 Name = Paramedic Max Level
 IconName = Paramedic
 PointsPer = 0
-PointsPerText := "10n"
+PointsPerText := "5n"
 gosub %CurrentLoopCode%
 return
 
